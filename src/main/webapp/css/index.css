@@ -1,8 +1,11 @@
 /*!
  * Copyright Jul-2019
- * 
+ *
  */
 
+#page-top{
+  background-color: #490275;
+}
  .masthead {
     position: relative;
     width: 100%;
@@ -20,3 +23,10 @@
       font-family: CalebiaFont;
       src: url("next_art/NEXT ART_Light.otf") format("otf");
   }
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    padding: 0;
+  }
+}
