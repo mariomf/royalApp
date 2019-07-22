@@ -1,7 +1,7 @@
 {
     "name": "Royal Fotografos",
     "short_name": "Royal",
-    "satrt_url": "/",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#490275",
     "theme_color": "#FFFFFF",
@@ -16,6 +16,11 @@
             "src": "/img/NewTabIcon.png",
             "type": "image/png",
             "sizes": "72x72"
+        },
+        {
+            "src": "/img/Logotipo-Royal_Secundario.png",
+            "type": "image/png",
+            "sizes": "144x144"
         }
     ]
 }

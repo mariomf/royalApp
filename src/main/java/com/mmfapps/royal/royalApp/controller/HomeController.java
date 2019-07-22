@@ -8,7 +8,7 @@ public class HomeController {
 	
 	@GetMapping("/index")
 	public String index() {
-		return "index.html";
+		return "/index.html";
 	}
 	@GetMapping("/ScheduleEvent")
 	public String ScheduleEvent() {
