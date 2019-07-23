@@ -8,7 +8,7 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "/img/Logotipo-Royal_Secundario.png",
+            "src": "/img/Logotipo Royal-01.png",
             "type": "image/png",
             "sizes": "96x96"
         },
@@ -18,7 +18,7 @@
             "sizes": "72x72"
         },
         {
-            "src": "/img/Logotipo-Royal_Secundario.png",
+            "src": "/img/Logotipo Royal-01.png",
             "type": "image/png",
             "sizes": "144x144"
         }
