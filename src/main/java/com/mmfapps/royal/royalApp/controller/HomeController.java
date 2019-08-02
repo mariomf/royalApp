@@ -12,7 +12,8 @@ public class HomeController {
 	}
 	@GetMapping("/ScheduleEvent")
 	public String ScheduleEvent() {
-		return "/pages/ScheduleEvent.html";
+//		return "/pages/ScheduleEvent.html";
+		return "/pages/login.html";
 	}
 	@GetMapping("/photographer")
 	public String photographer() {
