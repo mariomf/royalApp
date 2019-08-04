@@ -1,5 +1,5 @@
 //The version needs to be change everytime any of the files saved in cache are modify.
-const staticCacheName = 'site-static-v6';
+const staticCacheName = 'site-static-v7';
 const assets = [
     '/',
     '/index.html',

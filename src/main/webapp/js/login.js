@@ -2,6 +2,8 @@
     login();
 });*/
 
+var firebase = require("node_modules/@firebase/app");
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.

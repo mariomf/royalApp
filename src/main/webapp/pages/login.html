@@ -28,6 +28,28 @@
       <p> Welcome to Firebase web login Example. Uou re currently logged in.</p>
       <button>Logout</button>
     </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBVl8wi6GHV2THYsp7ktXU0_LtaNbl7Nco",
+        authDomain: "royalappbeta.firebaseapp.com",
+        databaseURL: "https://royalappbeta.firebaseio.com",
+        projectId: "royalappbeta",
+        storageBucket: "",
+        messagingSenderId: "632408986319",
+        appId: "1:632408986319:web:e8fe24d9bb41e758"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
     <script src="js/login.js"></script>
   </body>
 </html>
