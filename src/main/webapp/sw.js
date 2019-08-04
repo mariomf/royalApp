@@ -1,5 +1,5 @@
 //The version needs to be change everytime any of the files saved in cache are modify.
-const staticCacheName = 'site-static-v1';
+const staticCacheName = 'site-static-v6';
 const assets = [
     '/',
     '/index.html',
@@ -12,7 +12,7 @@ const assets = [
     '/css/photographer.css',
     '/img/Logotipo-Royal_Secundario.png',
     '/img/NewTabIcon.png',
-    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
+    '/https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
 ];
 // install event
 self.addEventListener('install', evt => {

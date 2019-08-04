@@ -69,6 +69,7 @@
                 <div class="row text-center mx-auto">
                     <div class="col-sm">
                       <img src="img/Logotipo-Royal_Secundario.png" class="img-logo" alt="">
+                      <a href="/login" type="button" class="btn btn-secondary btn-lg btn-block">login</a>
                       <a href="/ScheduleEvent" type="button" class="btn btn-primary btn-lg btn-block">Agendar fotógrafo para un evento</a>
                       <a href="/photographer" type="button" class="btn btn-secondary btn-lg btn-block">¿Eres fotógrafo?</a>
                       <!--Button example
@@ -83,6 +84,26 @@
 <!--    <div class="container">
         <h1>HOLA MUNDO!!</h1>
     </div>-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBVl8wi6GHV2THYsp7ktXU0_LtaNbl7Nco",
+        authDomain: "royalappbeta.firebaseapp.com",
+        databaseURL: "https://royalappbeta.firebaseio.com",
+        projectId: "royalappbeta",
+        storageBucket: "",
+        messagingSenderId: "632408986319",
+        appId: "1:632408986319:web:e8fe24d9bb41e758"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
 </body>

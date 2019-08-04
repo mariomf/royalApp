@@ -12,12 +12,17 @@ public class HomeController {
 	}
 	@GetMapping("/ScheduleEvent")
 	public String ScheduleEvent() {
-//		return "/pages/ScheduleEvent.html";
-		return "/pages/login.html";
+		return "/pages/ScheduleEvent.html";
 	}
 	@GetMapping("/photographer")
 	public String photographer() {
 		return "/pages/photographer.html";
+	}
+	
+	//Test
+	@GetMapping("/login")
+	public String login() {
+		return "/pages/login.html";
 	}
 	
 
