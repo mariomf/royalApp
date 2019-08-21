@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="CALEBIA, calebiamx, calebia, food, comida">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Somos la forma sencilla de cocinar y entregar tu comida preparada de toda la semana para que tu única chamba sea disfrutarla.">
+    <meta name="author" content="Royal Fotografos">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/boomapp-84476.appspot.com/o/VERTICAL%20LETRAS%20BLANCAS.png?alt=media&token=84acb16e-3db3-4232-9c1e-160ecd526ff2" />
+
+    <title>Royal Fotografos</title>
+    <link rel="shortcut icon" href="img/NewTabIcon.png">
+    <!-- Custom styles for this template -->
+    <link href="css/ScheduleEvent.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body id= "page-top">
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Royal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <!--<header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="container">
+                <div class="row text-center mx-auto">
+                    <div class="col-sm">-->               
+                      <!--Button example
+                          <a href="order" class="btn btn-primary js-scroll-trigger">Ordena AQUI!</a>-->
+                    <!--</div>
+                </div>
+            </div>
+        </div>
+    </header>-->
+
+    <!--Container
+
+    <div class="container" id="TitleSEpage">
+            <h1>Stock Control</h1>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#Home">Hora y lugar del evento</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#ServiceType">Tipo de servicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#Empresas">Resumen de servicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#Other">¡Gracias!</a>
+            </li>
+           <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Agrega Info</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" data-toggle="pill" href="#productPersist">+ Products</a>
+                    <a class="dropdown-item" data-toggle="pill" href="#EmpresaPersist">+ Empresa</a>
+                </div>
+            </li>
+        </ul>
+    </div>-->
+        <!-- Tab panes -->
+        <!-- HOME -->
+       <div class="tab-content">
+            <div class="tab-pane container active" id="Home">
+                <div class="card-body">
+                    <h5 class="card-title" id="datetimelebel">Elige el día y la hora que te vermos!</h5>
+                    <form>
+                        <div class="container">
+                            <div class="row">
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Día y hora:</label>
+                                        <div class='input-group date' id='datetimepicker'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Cuentanos un poco mas sobre tu evento</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <div th:if="${message}">
+                                            <h2 th:text="${message}"/>
+                                        </div>
+                                    
+                                        <div>
+                                            <form method="POST" enctype="multipart/form-data" action="/ScheduleEvent#Home">
+                                                <table>
+                                                    <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                                                    <tr><td></td><td><input type="image" value="Upload" /></td></tr>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    
+                                        <div>
+                                            <ul>
+                                                <li th:each="file : ${files}">
+                                                    <a th:href="${file}" th:text="${file}" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a class="nav-link btn btn-lg btn-primary" data-toggle="pill" href="#ServiceType">Siguiente</a>
+                                        <!--<a href="#ServiceType" class="btn btn-lg btn-primary">Siguiente</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- SERVICE TYPE -->
+            <div class="tab-pane container " id="ServiceType">
+                <!--<div class="card-body">-->
+                    <h5 class="card-title">Tipo de servicio</h5>
+                    <div class="row">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#Empresas" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a class="nav-link btn btn-primary" data-toggle="pill" href="#Empresas">Premium</a>
+                            </div>
+                        </div>
+                    </div>
+                <!--</div>-->
+                <div>
+                    <a class="nav-link btn btn-lg btn-primary" data-toggle="pill" href="#Home">Anterior</a>
+                    <a class="nav-link btn btn-lg btn-primary" data-toggle="pill" href="#Empresas">Siguiente</a>
+                    <!--<a href="#ServiceType" class="btn btn-lg btn-primary">Siguiente</a>-->
+                </div>
+            </div>
+
+            <!-- REVIEW SERVICE -->
+            <div class="tab-pane container " id="Empresas">
+                <div class="card-body">
+                    <h5 class="card-title">Empresas As</h5>
+                    <div class="row">
+                        <table class="table table-hover" id="EmpresasTable">
+                            <thead>
+                            <tr>
+                                <th scope="col">id Empresa</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Descrición</th>
+                                <th scope="col">Bonotes</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <a class="nav-link btn btn-lg btn-primary" data-toggle="pill" href="#ServiceType">Anterior</a>
+                        <!--<a href="#ServiceType" class="btn btn-lg btn-primary">Siguiente</a>-->
+                    </div>
+                </div>
+            </div>
+        <!--    <div class="tab-pane container" id="productPersist">
+                <div class="card-body">
+                    <h5 class="card-title">Add product</h5>
+                    <p class="card-text">Create a new product!</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputProduct">Product Name</label>
+                                <input name="name" type="text" class="form-control" id="inputProduct" placeholder="Product">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputProductCode">Product Code</label>
+                                <input name="productCode" type="text" class="form-control" id="inputProductCode" placeholder="Product Code">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPrice">Price</label>
+                            <input name="price" type="text" class="form-control" id="inputPrice" placeholder="Price">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="empresasData">Empresa</label>
+                                <select id="empresasData" class="form-control">
+                                    <option selected>Selecciona una...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="persistir">Persistir</button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="tab-pane container" id="EmpresaPersist">
+                <div class="card-body">
+                    <div class="container" id="empresa">
+                        <h5 class="card-title">Empresas persist!</h5>
+                        <p class="card-text">Ingresa la información de cada empresa</p>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputNomEmpresa">Nombre de la empresa</label>
+                                    <input name="nombre" type="text" class="form-control" id="inputNomEmpresa" placeholder="Empresa">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputDescEmpresa">Descripción</label>
+                                    <input name="plataforma" type="text" class="form-control" id="inputDescEmpresa" placeholder="Pequeña descripción de cada empresa">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="persistirEmpresa">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+
+<!--    <div class="container">
+        <h1>HOLA MUNDO!!</h1>
+    </div>-->
+    <script src="js/app.js"></script>
+    <script src="js/ScheduleEvent.js"></script>
+</body>
+</html>
