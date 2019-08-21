@@ -11,14 +11,15 @@
   <body>
     <div id="login_div" class="container main-div">
 
-      <form class="form-signin" role="form">
+      <form id="signup-form" class="form-signin" role="form">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input class="form-control" placeholder="Email address" required="" autofocus="" type="email" id="email_field">
         <input class="form-control" placeholder="Password" required="" type="password" id="password_field">
         <label class="checkbox">
           <input value="remember-me" type="checkbox"> Remember me
         </label>
-        <button onclick="login()" class="btn btn-lg btn-primary btn-block">Sign in</button><!--type="submit"-->
+        <button class="btn btn-lg btn-primary btn-block">Sign in</button><!--type="submit"-->
+        <!--onclick="login()"-->
       </form>
 
     </div>
@@ -33,6 +34,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#config-web-app -->
