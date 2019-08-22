@@ -9,26 +9,42 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div id="login_div" class="container main-div">
 
-      <form id="signup-form" class="form-signin" role="form">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input class="form-control" placeholder="Email address" required="" autofocus="" type="email" id="email_field">
-        <input class="form-control" placeholder="Password" required="" type="password" id="password_field">
-        <label class="checkbox">
+    <div id="login_div" class="container main-div">
+      <form id="login-form" class="form-signin-heading" role="form">
+        <h2 class="form-login-heading">Log in</h2>
+        <input class="form-control" placeholder="Email address" required="" autofocus="" type="email" id="email_field_login">
+        <input class="form-control" placeholder="Password" required="" type="password" id="password_field_login">
+        <!--<label class="checkbox">
           <input value="remember-me" type="checkbox"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block">Sign in</button><!--type="submit"-->
+        </label>-->
+        <button class="btn btn-lg btn-primary btn-block">Log in</button><!--type="submit"-->
         <!--onclick="login()"-->
       </form>
-
     </div>
 
-    <div id="user-div" class="loggedin-div">
+    <div id="signin_div" class="container main-div">
+      <form id="signup-form" class="form-signin" role="form">
+        <h2 class="form-signin-heading">Sign up</h2>
+        <div class="form-row">
+            <input class="form-control" placeholder="Name" required="" autofocus="" type="text" id="name_field_signup">
+            <input class="form-control" placeholder="Last Name" required="" autofocus="" type="text" id="lastName_field_signup">
+        </div>
+        <input class="form-control" placeholder="Email address" required="" autofocus="" type="email" id="email_field">
+        <input class="form-control" placeholder="Password" required="" type="password" id="password_field">
+        <!--<label class="checkbox">
+          <input value="remember-me" type="checkbox"> Remember me
+        </label>-->
+        <button class="btn btn-lg btn-primary btn-block">Sign up</button><!--type="submit"-->
+        <!--onclick="login()"-->
+      </form> 
+    </div>
+
+    <!--<div id="user-div" class="loggedin-div">
       <h3> Welcome User</h3>
       <p> Welcome to Firebase web login Example. Uou re currently logged in.</p>
       <button>Logout</button>
-    </div>
+    </div>-->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
