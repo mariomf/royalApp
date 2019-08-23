@@ -6,7 +6,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       console.log("Is loged in");
       // User is signed in.
-      window.location.replace("/");
+      
+      //window.location.replace("/");
+
       /*document.getElementById("user_div").style.display = "block";
       document.getElementById("login_div").style.display = "none";*/
     } else {
@@ -45,8 +47,44 @@ firebase.auth().onAuthStateChanged(function(user) {
     window.alert("Error..." + errorMessage);
     // ...
   });
-
  })
+
+/******************Facebook LOGIN *****************/
+function signinFacebook(){
+
+  var provider = new firebase.auth.FacebookAuthProvider();
+  //what kind of information or scope you want to access
+  provider.addScope('user_birthday');
+  firebase.auth().useDeviceLanguage();
+
+  firebase.auth().signInWithPopup(provider).then(function (result) {
+    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // .......................................
+    console.log(user);
+    var userEmailFacebook = document.querySelector("#user-emailFacebook");
+    userEmailFacebook.innerHTML = user.email;
+    var displayName = document.querySelector("#display-name");
+    displayName.innerHTML = user.displayName;
+    var img = document.createElement('img');
+    img.src = user.photoURL;
+    document.getElementById('profile-pic').appendChild(img);
+    // .......................................
+
+  }).catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+    window.alert("Error..." + errorMessage);
+  });
+}
 /*function login(){
     //var userEmail = $("#email_field").val();
     //var userPass = $("#password_field").val();
