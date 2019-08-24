@@ -1,13 +1,30 @@
 /*$(document).ready(function(){
     login();
 });*/
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
     if (user) {
 
       console.log("Is loged in");
+      console.log(additionalUserInfo.providerId);
       // User is signed in.
-      
-      //window.location.replace("/");
+      if (additionalUserInfo == null){//&& user.emailVerified == false
+        console.log("Is NOT verified");
+        /*user.sendEmailVerification().then(function() {
+          //Email sent
+          window.alert("Te hemos enviado un mail de verificacion!")
+        }).catch(function(error)) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+
+          window.alert("Error..." + errorMessage);
+        });*/
+
+        //console.log("Is verified");
+      } else {
+        console.log("ENTRO!");
+        //window.location.replace("/");
+      }
 
       /*document.getElementById("user_div").style.display = "block";
       document.getElementById("login_div").style.display = "none";*/
@@ -23,7 +40,21 @@ firebase.auth().onAuthStateChanged(function(user) {
   e.preventDefault();
   var userEmail = document.getElementById("email_field").value;
   var userPass = document.getElementById("password_field").value;
-  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).then(cred => {console.log(cred);}).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).then(function(result) {
+
+    var user = result.user;
+    user.sendEmailVerification().then(function(){
+      //Email sent
+      window.alert("Te hemos enviado un mail de verificacion!")
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+
+      window.alert("Error..." + errorMessage);
+    });
+
+  }/*cred => {console.log(cred);}*/).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -31,7 +62,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     window.alert("Error..." + errorMessage);
     // ...
   });
-
  })
 
  const loginForm = document.querySelector('#login-form');
@@ -85,13 +115,15 @@ function signinFacebook(){
     window.alert("Error..." + errorMessage);
   });
 }
+/******************Facebook LOGIN *****************/
+
 /*function login(){
     //var userEmail = $("#email_field").val();
     //var userPass = $("#password_field").val();
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
 
-    
+
 
     console.log(userEmail.toString());
     console.log(userPass.toString());
