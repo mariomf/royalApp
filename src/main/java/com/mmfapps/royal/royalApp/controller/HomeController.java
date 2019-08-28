@@ -24,6 +24,10 @@ public class HomeController {
 	public String login() {
 		return "/pages/login.html";
 	}
+	@GetMapping("/login2")
+	public String login2() {
+		return "/pages/login2.html";
+	}
 	
 
 }
