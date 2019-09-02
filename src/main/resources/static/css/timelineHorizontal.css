@@ -15,6 +15,16 @@
   left: 50%;
   margin-left: -1.5px;
 }
+/* .timelineLine::before{
+  top: 40px;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+} */
 .timeline .timeline-item {
   margin-bottom: 20px;
   position: relative;
@@ -120,7 +130,7 @@
   padding: 20px 0px 20px 0px;
   display: inline-block;
 }
-.timeline-horizontal:before {
+.timeline-horizontal::before {
   height: 3px;
   top: auto;
   bottom: 26px;
@@ -131,7 +141,7 @@
 }
 .timeline-horizontal .timeline-item {
   display: table-cell;
-  height: 280px;
+  height: 0px;
   width: 20%;
   min-width: 320px;
   float: none !important;

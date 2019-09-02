@@ -11,10 +11,20 @@
     color: white;
 }
 
-#ServiceType{
+/* #ServiceType{
     color: white;
+} */
+h5 {
+    color: white !important;
 }
 
 #productTable {
     color: white;
+}
+h4 {
+  color: black !important;
+}
+
+#AboutService{
+  color: black !important;
 }
