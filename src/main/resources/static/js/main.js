@@ -18,3 +18,11 @@ firebase.auth().onAuthStateChanged(function(user) {
       // No user is signed in.
     }
   });
+
+function whatsapp_btn() {
+  location.href="https://wa.me/5213320275495?text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre."
+}
+
+function ScheduleEvent() {
+  location.href="/ScheduleEvent-"
+}
