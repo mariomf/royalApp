@@ -1,21 +1,22 @@
 
 #page-top{
-    background-color: #490275;
+    background-color: white;
   }
 
 #Home{
-    color: white;
+    /* color: white; */
 }
 
 #TitleSEpage{
-    color: white;
+    /* color: white; */
 }
 
 /* #ServiceType{
     color: white;
 } */
 h5 {
-    color: white !important;
+    /* color: white !important; */
+    font-size:30px !important;
 }
 
 #productTable {
@@ -28,3 +29,23 @@ h4 {
 #AboutService{
   color: black !important;
 }
+/********************** whatsapp button *******************************/
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	/* box-shadow: 2px 2px 3px #999; */
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+/********************** whatsapp button *******************************/
