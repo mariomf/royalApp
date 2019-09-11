@@ -18,6 +18,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <!-- jQuery timepicker library -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+
+
+
     <link href="css/timelineHorizontal.css" rel="stylesheet" type="text/css">
     <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -155,14 +167,15 @@
                     </div>
                 </div> -->
                 <div class="card-body">
-                    <h5 class="card-title" id="datetimelebel">Elige el día y la hora que te vermos!</h5>
+                    <h5 class="card-title" id="datetimelebel">Elige el día y la hora,
+                      ¡tu fotógrafo llegará puntual como un reloj!</h5>
                     <form>
                         <div class="container">
                             <div class="row">
                                 <div class='col-sm-6 col-md col-lg'>
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Día y hora:</label>
-                                        <div style="overflow:hidden;">
+                                        <!-- <div style="overflow:hidden;">
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-md-8">
@@ -178,6 +191,10 @@
                                                     });
                                                 });
                                             </script>
+                                        </div> -->
+                                        <div class="md-form">
+                                          <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker">
+                                          <label for="input_starttime">Dark theme</label>
                                         </div>
                                     </div>
 <!-- **************************** TEXT BOX CUENTANOS UN POCO MAS Y AGREGAR EJEMPLOS *************************************************-->
