@@ -26,3 +26,7 @@ function whatsapp_btn() {
 function ScheduleEvent() {
   location.href="/ScheduleEvent-"
 }
+
+function Photographer() {
+  location.href = "/photographer"
+}

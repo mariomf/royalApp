@@ -12,6 +12,7 @@ $(function () {
 //   twelvehour: true
 // });
 
-$(document).ready(function(){
+/*$(document).ready(function(){
   $(#input_starttime).timepicker();
-});
+});*/
+
