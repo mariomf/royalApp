@@ -16,3 +16,9 @@ $(function () {
   $(#input_starttime).timepicker();
 });*/
 
+function reviewOrder1HourSocial(){
+  localStorage.setItem('ServiceType','1HSocial');
+  
+  location.href="/ReviewOrder?ServiceType=1HSocial";
+
+}

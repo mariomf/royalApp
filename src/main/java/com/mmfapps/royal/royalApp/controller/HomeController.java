@@ -10,13 +10,18 @@ public class HomeController {
 	public String index() {
 		return "/index.html";
 	}
-	@GetMapping("/ScheduleEvent-")
+	@GetMapping("/ScheduleEvent")
 	public String ScheduleEvent() {
 		return "/pages/ScheduleEvent.html";
 	}
 	@GetMapping("/photographer")
 	public String photographer() {
 		return "/pages/photographer.html";
+	}
+	
+	@GetMapping("/ReviewOrder")
+	public String reviewOrder() {
+		return "/pages/reviewOrder.html";
 	}
 	
 	//Test

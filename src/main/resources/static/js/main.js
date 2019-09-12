@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
       var user = firebase.auth().currentUser;
 
-      window.alert("Bienvenido " + user.displayName);
+      //window.alert("Bienvenido " + user.displayName);
       //window.location.replace("/");
 
       /*document.getElementById("user_div").style.display = "block";
@@ -24,7 +24,7 @@ function whatsapp_btn() {
 }
 
 function ScheduleEvent() {
-  location.href="/ScheduleEvent-"
+  location.href="/ScheduleEvent"
 }
 
 function Photographer() {
