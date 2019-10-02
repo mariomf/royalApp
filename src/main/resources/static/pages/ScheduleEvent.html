@@ -46,6 +46,7 @@
 
     <link rel="manifest" href="/manifest.json">
     <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>**Modal stop working with this script**-->
+
 </head>
 <body id= "page-top">
     <!--Navigation-->
@@ -174,6 +175,7 @@
                     <form>
                         <div class="container">
                             <div class="row">
+<!-- **************************** Fecha y hora  *************************************************-->
                                 <div class='col-sm-6 col-md col-lg'>
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Día y hora:</label>
@@ -185,20 +187,25 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <script type="text/javascript">
+                                            <!--<script type="text/javascript">
                                                 $(function () {
                                                     $('#datetimepicker12').datetimepicker({
                                                         inline: true,
                                                         sideBySide: true
                                                     });
+                                                    $('#datetimepicker12').data("DateTimePicker").stepping(15);
+                                                    var aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+                                                    var aux3 = $('#datetimepicker12').data("DateTimePicker").viewMode();
+                                                    var aux2 = $('#datetimepicker12').datetimepicker();
+                                                    console.log(aux1);
+                                                    console.log(aux1._d);
+                                                    console.log(aux3);
+                                                    console.log(aux2);
                                                 });
-                                            </script>
+                                            </script>-->
                                         </div>
-                                        <!--<div class="md-form">
-                                          <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker">
-                                          <label for="input_starttime">Dark theme</label>
-                                        </div>-->
                                     </div>
+<!-- **************************** Fecha y hora  *************************************************-->
 <!-- **************************** TEXT BOX CUENTANOS UN POCO MAS Y AGREGAR EJEMPLOS *************************************************-->
                                     <!-- <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Cuentanos un poco mas sobre tu evento</label>
@@ -582,7 +589,8 @@
 <!--    <div class="container">
         <h1>HOLA MUNDO!!</h1>
     </div>-->
-    <script src="js/app.js"></script>
-    <script src="js/ScheduleEvent.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/ScheduleEvent.js"></script>
+
 </body>
 </html>
