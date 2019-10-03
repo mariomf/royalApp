@@ -23,14 +23,82 @@ $(function () {
   console.log(aux2);
 });
 
+/********************* ROYAL SOCIAL OPTIONS **********************************/
+
+//1 HOUR OF ROYAL SOCIAL
 function reviewOrder1HourSocial(){
   //$('#datetimepicker').data("DateTimePicker").FUNCTION()
   aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
   localStorage.setItem('DateAndTime', aux1._d);
   localStorage.setItem('ServiceType','1HSocial');
   location.href="/ReviewOrder";
-
 }
+
+//2 HOUR OF ROYAL SOCIAL
+function reviewOrder2HourSocial() {
+  //$('#datetimepicker').data("DateTimePicker").FUNCTION()
+  aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+  localStorage.setItem('DateAndTime', aux1._d);
+  localStorage.setItem('ServiceType', '2HSocial');
+  location.href = "/ReviewOrder";
+}
+
+//3 HOUR OF ROYAL SOCIAL
+function reviewOrder3HourSocial() {
+  //$('#datetimepicker').data("DateTimePicker").FUNCTION()
+  aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+  localStorage.setItem('DateAndTime', aux1._d);
+  localStorage.setItem('ServiceType', '3HSocial');
+  location.href = "/ReviewOrder";
+}
+
+//MORE HOURS OF ROYAL SOCIAL
+function reviewOrderMoreHoursSocial() {
+  //$('#datetimepicker').data("DateTimePicker").FUNCTION()
+  aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+  localStorage.setItem('DateAndTime', aux1._d);
+  localStorage.setItem('ServiceType', 'MoreHSocial');
+  location.href = "/ReviewOrder";
+}
+
+/********************* ROYAL BUSINESS OPTIONS **********************************/
+
+//1 HOUR OF ROYAL BUSINESS
+function reviewOrder1HourBusiness() {
+  //$('#datetimepicker').data("DateTimePicker").FUNCTION()
+  aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+  localStorage.setItem('DateAndTime', aux1._d);
+  localStorage.setItem('ServiceType', '1HBusiness');
+  location.href = "/ReviewOrder";
+}
+
+//2 HOUR OF ROYAL BUSINESS
+function reviewOrder2HourBusiness() {
+  //$('#datetimepicker').data("DateTimePicker").FUNCTION()
+  aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+  localStorage.setItem('DateAndTime', aux1._d);
+  localStorage.setItem('ServiceType', '2HBusiness');
+  location.href = "/ReviewOrder";
+}
+
+//3 HOUR OF ROYAL BUSINESS
+function reviewOrder3HourBusiness() {
+  //$('#datetimepicker').data("DateTimePicker").FUNCTION()
+  aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+  localStorage.setItem('DateAndTime', aux1._d);
+  localStorage.setItem('ServiceType', '3HBusiness');
+  location.href = "/ReviewOrder";
+}
+
+//MORE HOURS OF ROYAL BUSINESS
+function reviewOrderMoreHoursBusiness() {
+  //$('#datetimepicker').data("DateTimePicker").FUNCTION()
+  aux1 = $('#datetimepicker12').data("DateTimePicker").viewDate();
+  localStorage.setItem('DateAndTime', aux1._d);
+  localStorage.setItem('ServiceType', 'MoreHBusiness');
+  location.href = "/ReviewOrder";
+}
+
 //);
 
 

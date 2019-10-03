@@ -5,7 +5,12 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
     if (user) {
 
       console.log("Is loged in");
-      console.log(additionalUserInfo.providerId);
+      //console.log(additionalUserInfo.providerId);
+      console.log(user);
+      if (user.emailVerified = true){
+        console.log("ENTRO!");
+        window.location.replace("/");
+      }
       // User is signed in.
       if (additionalUserInfo == null){//&& user.emailVerified == false
         console.log("Is NOT verified");
@@ -23,7 +28,7 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
         //console.log("Is verified");
       } else {
         console.log("ENTRO!");
-        //window.location.replace("/");
+        window.location.replace("/");
       }
 
       /*document.getElementById("user_div").style.display = "block";
