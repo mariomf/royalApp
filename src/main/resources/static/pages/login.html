@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -24,9 +25,9 @@
       </form>
     </div>
 
-    <button onclick="signinFacebook()"id="sign-inFacebook">
+    <!--<button onclick="signinFacebook()"id="sign-inFacebook">
       Sign in with Facebook
-    </button>
+    </button>-->
     <div id="user-emailFacebook">
 
     </div>
@@ -36,6 +37,19 @@
     <div id="display-name">
 
     </div>
+
+    <!--Facebook test
+    <button class="loginBtn loginBtn--facebook">
+      Login with Facebook
+    </button>-->
+    <!--<div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=742882586166118&autoLogAppEvents=1"></script>-->
+    <!--Facebook test
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+      data-auto-logout-link="false" data-use-continue-as="false"></div>
+    Facebook test-->
+
 
     <div id="signin_div" class="container main-div">
       <form id="signup-form" class="form-signin" role="form">
@@ -54,6 +68,41 @@
       </form>
     </div>
 
+
+
+    <!--*********************NEW LOGIN TEST*****************************************************-->
+    <div class="login-form">
+      <form action="/examples/actions/confirmation.php" method="post">
+        <div class="avatar">
+          <img src="img/user(1).png" alt="Avatar">
+        </div>
+        <h2 class="text-center">Member Login</h2>
+        <div class="form-group">
+          <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+        </div>
+        <div class="clearfix">
+          <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+          <a href="#" class="pull-right">Forgot Password?</a>
+        </div>
+      </form>
+      <p class="text-center small">Don't have an account? <a href="#">Sign up here!</a></p>
+
+
+      <button class="loginBtn loginBtn--facebook" onclick="signinFacebook()" id="sign-inFacebook">
+        Login with Facebook
+      </button>
+
+    </div>
+
+    <!--https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=login-form-with-avatar-image
+      https://codepen.io/davidelrizzo/pen/vEYvyv
+      *********************NEW LOGIN TEST*****************************************************-->
     <!--<div id="user-div" class="loggedin-div">
       <h3> Welcome User</h3>
       <p> Welcome to Firebase web login Example. Uou re currently logged in.</p>
