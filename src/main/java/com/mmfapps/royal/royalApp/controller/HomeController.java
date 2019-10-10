@@ -33,6 +33,8 @@ public class HomeController {
 	public String login2() {
 		return "/pages/login2.html";
 	}
-	
-
+	@GetMapping("/signUp")
+	public String SignUp() {
+		return "/pages/SignUp.html";
+	}
 }

@@ -89,3 +89,45 @@ function Login(){
   default:
   // code block
 }*/
+
+function confirmOrder(){
+  firebase.auth().onAuthStateChanged(function (user, additionalUserInfo) {
+    if (user) {
+
+      console.log("Is loged in");
+      //console.log(additionalUserInfo.providerId);
+      console.log(user);
+      if (user.emailVerified = true) {
+        console.log("ENTRO!");
+        //window.location.replace("/");
+      }
+      // User is signed in.
+      if (additionalUserInfo == null) {//&& user.emailVerified == false
+        console.log("Is NOT verified");
+        /*user.sendEmailVerification().then(function() {
+          //Email sent
+          window.alert("Te hemos enviado un mail de verificacion!")
+        }).catch(function(error)) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+
+          window.alert("Error..." + errorMessage);
+        });*/
+
+        //console.log("Is verified");
+      } else {
+        console.log("ENTRO!");
+        //window.location.replace("/");
+      }
+
+      /*document.getElementById("user_div").style.display = "block";
+      document.getElementById("login_div").style.display = "none";*/
+    } else {
+
+      console.log("Is NOT loged in");
+      // No user is signed in.
+      window.location.replace("/login");
+    }
+  });
+}

@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Royal Fotografos, Royal Fotógrafos, Fotografos, Royal, Fotografía">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Tu nueva plataforma para servicios de todo tipo de fotografía.">
+    <meta name="author" content="Royal Fotografos">
+    <meta property="og:image"
+      content="https://firebasestorage.googleapis.com/v0/b/royalappbeta.appspot.com/o/Logotipo-Royal_Secundario.png?alt=media&token=28e95dc0-afe8-4645-82a6-35f889809bde" />
+      
     <title>Royal Login</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/NewTabIcon.png">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/login.css" rel="stylesheet">
 
@@ -12,18 +19,16 @@
   </head>
   <body>
 
-    <div id="login_div" class="container main-div">
+    <!--**********************************FUNCTIONAL LOGIN******************************************************************-->
+    <!--<div id="login_div" class="container main-div">
       <form id="login-form" class="form-signin-heading" role="form">
         <h2 class="form-login-heading">Log in</h2>
         <input class="form-control" placeholder="Email address" required="" autofocus="" type="email" id="email_field_login">
         <input class="form-control" placeholder="Password" required="" type="password" id="password_field_login">
-        <!--<label class="checkbox">
-          <input value="remember-me" type="checkbox"> Remember me
-        </label>-->
-        <button class="btn btn-lg btn-primary btn-block">Log in</button><!--type="submit"-->
-        <!--onclick="login()"-->
+        <button class="btn btn-lg btn-primary btn-block">Log in</button>
       </form>
-    </div>
+    </div>-->
+    <!--**********************************FUNCTIONAL LOGIN******************************************************************-->
 
     <!--<button onclick="signinFacebook()"id="sign-inFacebook">
       Sign in with Facebook
@@ -38,20 +43,9 @@
 
     </div>
 
-    <!--Facebook test
-    <button class="loginBtn loginBtn--facebook">
-      Login with Facebook
-    </button>-->
-    <!--<div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=742882586166118&autoLogAppEvents=1"></script>-->
-    <!--Facebook test
-    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
-      data-auto-logout-link="false" data-use-continue-as="false"></div>
-    Facebook test-->
+    <form id="signup-form" class="form-signin" role="form"></form>
 
-
-    <div id="signin_div" class="container main-div">
+    <!--<div id="signin_div" class="container main-div">
       <form id="signup-form" class="form-signin" role="form">
         <h2 class="form-signin-heading">Sign up</h2>
         <div class="form-row">
@@ -60,38 +54,36 @@
         </div>
         <input class="form-control" placeholder="Email address" required="" autofocus="" type="email" id="email_field">
         <input class="form-control" placeholder="Password" required="" type="password" id="password_field">
-        <!--<label class="checkbox">
-          <input value="remember-me" type="checkbox"> Remember me
-        </label>-->
-        <button class="btn btn-lg btn-primary btn-block">Sign up</button><!--type="submit"-->
-        <!--onclick="login()"-->
+        <button class="btn btn-lg btn-primary btn-block">Sign up</button>
       </form>
-    </div>
+    </div>-->
 
 
 
     <!--*********************NEW LOGIN TEST*****************************************************-->
     <div class="login-form">
-      <form action="/examples/actions/confirmation.php" method="post">
+      <form id="login-form" class="form-signin-heading" role="form">
+      <!--<form id="login-form" action="/examples/actions/confirmation.php" method="post">-->
         <div class="avatar">
           <img src="img/user(1).png" alt="Avatar">
         </div>
         <h2 class="text-center">Member Login</h2>
         <div class="form-group">
-          <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+          <input type="email" class="form-control" name="username" placeholder="Email address" required="required" id="email_field_login">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+          <input type="password" class="form-control" name="password" placeholder="Password" required="required" id="password_field_login">
+          <button class="btn btn-primary btn-lg btn-block">Sign in</button>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
         </div>
-        <div class="clearfix">
+        <!--Not used for now-->
+        <!--<div class="clearfix">
           <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
           <a href="#" class="pull-right">Forgot Password?</a>
-        </div>
+        </div>-->
       </form>
-      <p class="text-center small">Don't have an account? <a href="#">Sign up here!</a></p>
+      <p class="text-center small">Don't have an account? <a href="/signUp">Sign up here!</a></p><!--onclick="signUp()"-->
 
 
       <button class="loginBtn loginBtn--facebook" onclick="signinFacebook()" id="sign-inFacebook">

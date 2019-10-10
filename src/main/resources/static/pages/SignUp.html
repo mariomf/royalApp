@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Royal Fotografos, Royal Fotógrafos, Fotografos, Royal, Fotografía">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Tu nueva plataforma para servicios de todo tipo de fotografía.">
+    <meta name="author" content="Royal Fotografos">
+    <meta property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/royalappbeta.appspot.com/o/Logotipo-Royal_Secundario.png?alt=media&token=28e95dc0-afe8-4645-82a6-35f889809bde" />
+    
+    <title>Royal SignUp</title>
+    <link rel="shortcut icon" href="img/NewTabIcon.png">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!--*********************SIGN UP TEST*******************************-->
+
+    <div id="signin_div" class="container main-div login-form">
+        <form id="signup-form" class="form-signin" role="form" action="/examples/actions/confirmation.php" method="post">
+            <div class="avatar">
+                <img src="img/user(1).png" alt="Avatar">
+            </div>
+            <h2 class="text-center">Member Sign Up</h2>
+            <div class="form-group">
+                <input class="form-control" placeholder="Name" required="" autofocus="" type="text" id="name_field_signup">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Last Name" required="" autofocus="" type="text" id="lastName_field_signup">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="username" placeholder="Email address" required="required"
+                    id="email_field">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required"
+                    id="password_field">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+            </div>
+        </form>
+        <p class="text-center small">Already have an account? <a href="/login">Sign in here!</a></p>
+    </div>
+
+    <!--*********************SIGN UP TEST*******************************-->
+
+
+
+
+
+
+
+
+    <!--<div id="signin_div" class="container main-div">
+        <form id="signup-form" class="form-signin" role="form">
+            <h2 class="form-signin-heading">Sign up</h2>
+            <div class="form-row">
+                <input class="form-control" placeholder="Name" required="" autofocus="" type="text"
+                    id="name_field_signup">
+                <input class="form-control" placeholder="Last Name" required="" autofocus="" type="text"
+                    id="lastName_field_signup">
+            </div>
+            <input class="form-control" placeholder="Email address" required="" autofocus="" type="email"
+                id="email_field">
+            <input class="form-control" placeholder="Password" required="" type="password" id="password_field">
+            <button class="btn btn-lg btn-primary btn-block">Sign up</button>
+        </form>
+    </div>-->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBVl8wi6GHV2THYsp7ktXU0_LtaNbl7Nco",
+            authDomain: "royalappbeta.firebaseapp.com",
+            databaseURL: "https://royalappbeta.firebaseio.com",
+            projectId: "royalappbeta",
+            storageBucket: "",
+            messagingSenderId: "632408986319",
+            appId: "1:632408986319:web:e8fe24d9bb41e758"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>

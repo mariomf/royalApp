@@ -122,6 +122,10 @@ function signinFacebook(){
 }
 /******************Facebook LOGIN *****************/
 
+function singUp(){
+  window.location.replace("/SignUp");
+}
+
 /*function login(){
     //var userEmail = $("#email_field").val();
     //var userPass = $("#password_field").val();
