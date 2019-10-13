@@ -95,47 +95,33 @@ function Login(){
 
 function confirmOrder(){
   var userTest = firebase.auth().currentUser
-  //firebase.auth().getcurrentuser().reload();
+  
   firebase.auth().onAuthStateChanged(function (user, additionalUserInfo) {
-    //user.reload();
+
     if (user) {
 
-      console.log("Is loged in");
-      
-      console.log(user);
-      console.log(user.emailVerified);
-      console.log(user.providerData[0].providerId);//Check SIGN IN METHOD facebook or email.
-      userTest.reload();
-      console.log(userTest);
-      if (userTest.emailVerified == true) {
-      //if (user.emailVerified == true) {
-        console.log("ENTRO!");
-        //window.location.replace("/successfulOrder");
-      }/*else{
-        window.alert("Verifica tu cuenta para continuar!");
-      }*/
-      // User is signed in.
-      if (additionalUserInfo == null) {//&& user.emailVerified == false
-        console.log("Is NOT verified");
-        /*user.sendEmailVerification().then(function() {
-          //Email sent
-          window.alert("Te hemos enviado un mail de verificacion!")
-        }).catch(function(error)) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
+      if (user.providerData[0].providerId == 'facebook.com'){
+        window.location.replace("/successfulOrder");
+        //SEND MAIL HERE
+      }else{
+        console.log("Is loged in");
 
-          window.alert("Error..." + errorMessage);
-        });*/
-
-        //console.log("Is verified");
-      } else {
-        console.log("ENTRO!");
-        //window.location.replace("/");
+        console.log(user);
+        console.log(user.emailVerified);
+        console.log(user.providerData[0].providerId);//Check SIGN IN METHOD facebook or email.
+        userTest.reload();
+        console.log(userTest);
+        if (userTest.emailVerified == true) {
+          //if (user.emailVerified == true) {
+          console.log("ENTRO!");
+          window.location.replace("/successfulOrder");
+          //SEND MAIL HERE
+        } else {
+          window.alert("Te enviamos un correo, verifica tu cuenta y refresca la pantalla para continuar!!");
+        }
       }
 
-      /*document.getElementById("user_div").style.display = "block";
-      document.getElementById("login_div").style.display = "none";*/
+
     } else {
 
       console.log("Is NOT loged in");
