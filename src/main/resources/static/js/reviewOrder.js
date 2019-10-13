@@ -42,6 +42,7 @@ $(document).ready(function(){
     document.getElementById('SelectedHours').innerHTML = "01:00 hora";
     document.getElementById('PriceHours').innerHTML = "$600";
   }
+/********************* ROYAL SOCIAL OPTIONS **********************************/
 
 /********************* ROYAL BUSINESS OPTIONS **********************************/
   //SEE THE OPTION OF A SWITCH CASE 
@@ -68,17 +69,19 @@ $(document).ready(function(){
     document.getElementById('SelectedHours').innerHTML = "01:00 hora";
     document.getElementById('PriceHours').innerHTML = "$600";
   }
-
+/********************* ROYAL BUSINESS OPTIONS **********************************/
 });
 
+/************* HREFs ********************************/
 function ScheduleEvent() {
   location.href = "/ScheduleEvent";
 }
 function Login(){
   location.href = "/login";
 }
+/************* HREFs ********************************/
 
-
+//   NICE TO HAVE!
 /*switch (expression) {
   case x:
     // code block
@@ -91,16 +94,26 @@ function Login(){
 }*/
 
 function confirmOrder(){
+  var userTest = firebase.auth().currentUser
+  //firebase.auth().getcurrentuser().reload();
   firebase.auth().onAuthStateChanged(function (user, additionalUserInfo) {
+    //user.reload();
     if (user) {
 
       console.log("Is loged in");
-      //console.log(additionalUserInfo.providerId);
+      
       console.log(user);
-      if (user.emailVerified = true) {
+      console.log(user.emailVerified);
+      console.log(user.providerData[0].providerId);//Check SIGN IN METHOD facebook or email.
+      userTest.reload();
+      console.log(userTest);
+      if (userTest.emailVerified == true) {
+      //if (user.emailVerified == true) {
         console.log("ENTRO!");
-        //window.location.replace("/");
-      }
+        //window.location.replace("/successfulOrder");
+      }/*else{
+        window.alert("Verifica tu cuenta para continuar!");
+      }*/
       // User is signed in.
       if (additionalUserInfo == null) {//&& user.emailVerified == false
         console.log("Is NOT verified");

@@ -9,7 +9,7 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
       console.log(user);
       if (user.emailVerified = true){
         console.log("ENTRO!");
-        window.location.replace("/");
+        window.location.replace("/ReviewOrder");
       }
       // User is signed in.
       if (additionalUserInfo == null){//&& user.emailVerified == false
@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
         //console.log("Is verified");
       } else {
         console.log("ENTRO!");
-        window.location.replace("/");
+        window.location.replace("/ReviewOrder");
       }
 
       /*document.getElementById("user_div").style.display = "block";

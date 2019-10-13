@@ -37,4 +37,8 @@ public class HomeController {
 	public String SignUp() {
 		return "/pages/SignUp.html";
 	}
+	@GetMapping("/successfulOrder")
+	public String successfulOrder() {
+		return "/pages/successfulOrder.html";
+	}
 }

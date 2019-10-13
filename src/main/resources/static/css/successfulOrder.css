@@ -1,0 +1,165 @@
+/*!
+ * Copyright Jul-2019
+ *
+ */
+
+#page-top{
+  background-color: white;
+  /* background-color: #490275; */
+}
+.navbar-color {
+  background-color: #696c70a6!important;
+}
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 30rem;
+    /* padding: 0rem 0; */
+    /* background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%); */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: scroll; */
+    /* background-size: cover; */
+    /* background-image: url(../img/food.jpg); */
+}
+
+  @font-face {
+      font-family: CalebiaFont;
+      src: url("next_art/NEXT ART_Light.otf") format("otf");
+  }
+
+@media (min-width: 992px) {
+  .masthead {
+    /* height: 100vh; */
+    padding: 3rem;
+  }
+  .btn-block {
+    display: block;
+    width: 33% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#button_Home{
+  color: #fff !important;
+  background-color: #490275 !important;
+  border-color: #490275 !important;
+}
+
+.img-logo-royal {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+/********************** whatsapp button *******************************/
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:70px;
+	right:5px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	/* box-shadow: 2px 2px 3px #999; */
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+/********************** whatsapp button *******************************/
+
+.bg-black {
+    background-color: #86898d !important;
+}
+
+.contact-section {
+  padding: 5rem 0 0;
+}
+
+.contact-section a{
+  color: rgba(0,0,0,.5)!important;
+}
+.contact-section .card {
+    border: 0;
+    border-bottom: 0.25rem solid #76149e;
+}
+
+.contact-section .card h4 {
+  font-size: 0.8rem;
+  font-family: 'Varela Round';
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.contact-section .card hr {
+  border-color: #76149e;
+  border-width: 0.25rem;
+  width: 3rem;
+}
+
+.contact-section .social {
+  margin-top: 5rem;
+}
+
+.contact-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-section .social a:active {
+  color: #fff;
+}
+
+.text-purple {
+    color: #76149e !important;
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+.fa-mobile-alt:before {
+    content: "\f3cd";
+}
+
+.fa-map-marked-alt:before {
+    content: "\f5a0";
+}
+
+.fa-facebook-f:before {
+    content: "\f39e";
+}
+
+.fa-twitter:before {
+    content: "\f099";
+    /* \f16d twitter */
+}
+
+footer {
+    padding: 5rem 0;
+}
+.text-footer {
+  color: #000; /* black */
+}
+
+.button_AreUPhotographer:hover {
+  text-decoration: underline;
+}
+
+.button_AreUPhotographer{
+  padding-bottom: 1rem;
+}
