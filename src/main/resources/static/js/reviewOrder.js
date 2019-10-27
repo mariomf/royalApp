@@ -44,6 +44,36 @@ $(document).ready(function(){
     TotalPrice = 1500;
   }
 
+  //4 HOUR OF ROYAL SOCIAL
+  if (selected == "4HSocial") {
+    document.getElementById('SelectedHours').innerHTML = "04:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+  //5 HOUR OF ROYAL SOCIAL
+  if (selected == "5HSocial") {
+    document.getElementById('SelectedHours').innerHTML = "05:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+  //6 HOUR OF ROYAL SOCIAL
+  if (selected == "6HSocial") {
+    document.getElementById('SelectedHours').innerHTML = "06:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+
+  //7 HOUR OF ROYAL SOCIAL
+  if (selected == "7HSocial") {
+    document.getElementById('SelectedHours').innerHTML = "07:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+
   //MORE HOURS OF ROYAL SOCIAL
   if (selected == "MoreHSocial") {
     document.getElementById('SelectedHours').innerHTML = "01:00 hora";
@@ -74,6 +104,36 @@ $(document).ready(function(){
   //3 HOUR OF ROYAL BUSINESS
   if (selected == "3HBusiness") {
     document.getElementById('SelectedHours').innerHTML = "03:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+
+  //4 HOUR OF ROYAL BUSINESS
+  if (selected == "4HBusiness") {
+    document.getElementById('SelectedHours').innerHTML = "04:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+  //5 HOUR OF ROYAL BUSINESS
+  if (selected == "5HBusiness") {
+    document.getElementById('SelectedHours').innerHTML = "05:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+  //6 HOUR OF ROYAL BUSINESS
+  if (selected == "6HBusiness") {
+    document.getElementById('SelectedHours').innerHTML = "06:00 hora";
+    document.getElementById('PriceHours').innerHTML = "$1,500";
+
+    TotalPrice = 1500;
+  }
+
+  //7 HOUR OF ROYAL BUSINESS
+  if (selected == "7HBusiness") {
+    document.getElementById('SelectedHours').innerHTML = "07:00 hora";
     document.getElementById('PriceHours').innerHTML = "$1,500";
 
     TotalPrice = 1500;
