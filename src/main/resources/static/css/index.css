@@ -174,3 +174,7 @@ footer {
 .button_AreUPhotographer{
   padding-bottom: 1rem;
 }
+
+.btn-primary {
+    color: #fff !important;
+}

@@ -173,14 +173,21 @@ function Login(){
   // code block
 }*/
 
+
 function confirmOrder(){
-  var userTest = firebase.auth().currentUser
+  //var userTest = firebase.auth().currentUser
   
   firebase.auth().onAuthStateChanged(function (user, additionalUserInfo) {
 
     if (user) {
 
       if (user.providerData[0].providerId == 'facebook.com'){
+        console.log("Is loged in");//
+
+        console.log(user);//
+        console.log(user.emailVerified);//
+        console.log(user.providerData[0].providerId);//Check SIGN IN METHOD facebook or email.
+        userTest.reload();//
         window.location.replace("/successfulOrder");
         //SEND MAIL HERE
       }else{

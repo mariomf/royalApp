@@ -13,7 +13,7 @@ function accion() {
     postearMail(urlVideogamesPersist,newForm);
 
     console.log(JSON.stringify(newForm));
-    alert(newForm.FirsName+" ¡GRACIAS!");
+    alert(newForm.FirstName +" ¡GRACIAS!");
 }
 
 function postearMail(UrlAEnviar,data){
