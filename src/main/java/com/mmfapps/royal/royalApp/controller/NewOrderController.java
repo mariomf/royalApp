@@ -77,11 +77,8 @@ public class NewOrderController {
 				"<br>\n" +
 				"\n" +
 				"<div class=\"body-text\">\n" +
-
 					"Nombre : "+form.getFirstName()+" "+form.getLastName()+" <br>\n" +
 					"Email : "+form.getEmail()+" <br>\n" +
-					"Link: "+ form.getLink()+" <br>\n" +
-					"Equipo: "+ form.getEquipment()+" <br>\n" +
 				"  <br><br>\n" +
 				"\n" +
 				"  <br><br>\n" +

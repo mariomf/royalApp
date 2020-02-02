@@ -16,7 +16,7 @@ $(document).ready(function(){
   console.log(selected1);
 
 /********************* ROYAL SOCIAL OPTIONS **********************************/
-  //SEE THE OPTION OF A SWITCH CASE 
+  //SEE THE OPTION OF A SWITCH CASE
   //1 HOUR OF ROYAL SOCIAL
   if (selected == "1HSocial"){
     console.log("inside 1HSocial");
@@ -84,7 +84,7 @@ $(document).ready(function(){
 /********************* ROYAL SOCIAL OPTIONS **********************************/
 
 /********************* ROYAL BUSINESS OPTIONS **********************************/
-  //SEE THE OPTION OF A SWITCH CASE 
+  //SEE THE OPTION OF A SWITCH CASE
   //1 HOUR OF ROYAL BUSINESS
   if (selected == "1HBusiness") {
     document.getElementById('SelectedHours').innerHTML = "01:00 hora";
@@ -175,21 +175,24 @@ function Login(){
 
 
 function confirmOrder(){
-  //var userTest = firebase.auth().currentUser
-  
+  var userTest = firebase.auth().currentUser
+
   firebase.auth().onAuthStateChanged(function (user, additionalUserInfo) {
 
     if (user) {
 
       if (user.providerData[0].providerId == 'facebook.com'){
-        console.log("Is loged in");//
 
-        console.log(user);//
-        console.log(user.emailVerified);//
-        console.log(user.providerData[0].providerId);//Check SIGN IN METHOD facebook or email.
-        userTest.reload();//
-        window.location.replace("/successfulOrder");
+        var FormInfo = {FirstName: user.displayName,
+            LastName: null,
+            Email: user.email,
+            Link: null,
+            Equipment: null,
+            AgreeTerms: null,
+        };
         //SEND MAIL HERE
+        accion(FormInfo);
+
       }else{
         console.log("Is loged in");
 
@@ -201,8 +204,17 @@ function confirmOrder(){
         if (userTest.emailVerified == true) {
           //if (user.emailVerified == true) {
           console.log("ENTRO!");
-          window.location.replace("/successfulOrder");
+          //window.location.replace("/successfulOrder");
           //SEND MAIL HERE
+          var FormInfo = {FirstName: " ",
+              LastName: "",
+              Email: user.email,
+              Link: "",
+              Equipment: "",
+              AgreeTerms: "",
+          };
+          //SEND MAIL HERE
+          accion(FormInfo);
         } else {
           window.alert("Te enviamos un correo, verifica tu cuenta y refresca la pantalla para continuar!!");
         }
@@ -217,3 +229,40 @@ function confirmOrder(){
     }
   });
 }
+
+function accion(FormInfo) {
+
+    var urlVideogamesPersist = "/sendOrderMail";
+    //var newForm = fillForms();
+
+    postearMail(urlVideogamesPersist,FormInfo);
+
+    console.log(JSON.stringify(FormInfo));
+    alert(FormInfo.FirstName +" ¡GRACIAS!");
+    window.location.replace("/successfulOrder");
+}
+
+function postearMail(UrlAEnviar,data){
+    $.ajax({
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        url: UrlAEnviar,
+        data:  JSON.stringify(data),
+        dataType: "json"
+    });
+}
+
+//*******************************    Object FormInfo       ***********************************************************
+// function fillForms() {
+//
+//         var FormInfo = {FirstName: $("#validationDefault01").val(),
+//             LastName: $("#validationDefault02").val(),
+//             Email: $("#validationDefaultUsername").val(),
+//             Link: $("#validationDefault03").val(),
+//             Equipment: $("#exampleFormControlTextarea1").val(),
+//             AgreeTerms: $("#invalidCheck2").val(),
+//         };
+//
+//         return FormInfo;
+//
+// }
