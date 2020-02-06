@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.google.gson.Gson;
-import com.mmfapps.royal.royalApp.model.PhotographerForm;
+import com.mmfapps.royal.royalApp.model.NewOrder;
 import com.mmfapps.royal.royalApp.service.SmtpMailSender;
 
 @Controller
@@ -21,11 +21,11 @@ public class NewOrderController {
 	private SmtpMailSender smtpMailSender;
 
 	@PostMapping("/sendOrderMail")
-	public void sendMail (@RequestBody String photographerInfo) throws MessagingException, GeneralSecurityException, IOException {
+	public void sendMail (@RequestBody String orderInfo) throws MessagingException, GeneralSecurityException, IOException {
 		Gson gson = new Gson();
 //		ArrayList<Form> yourArray = gson.fromJson(prueba_aux, new TypeToken<List<Form>>(){}.getType());
-		PhotographerForm form = new PhotographerForm();
-		form = gson.fromJson(photographerInfo,PhotographerForm.class);
+		NewOrder order = new NewOrder();
+		order = gson.fromJson(orderInfo,NewOrder.class);
 		
 
 
@@ -77,8 +77,11 @@ public class NewOrderController {
 				"<br>\n" +
 				"\n" +
 				"<div class=\"body-text\">\n" +
-					"Nombre : "+form.getFirstName()+" "+form.getLastName()+" <br>\n" +
-					"Email : "+form.getEmail()+" <br>\n" +
+					"Nombre : "+order.getFirstName()+" <br>\n" +
+					"Servicio : "+order.getServiceType()+" <br>\n" +
+					"Email : "+order.getEmail()+" <br>\n" +
+					"Día y hora : "+order.getDateHours()+" <br>\n" +
+					"Total : "+order.getTotal()+" <br>\n" +
 				"  <br><br>\n" +
 				"\n" +
 				"  <br><br>\n" +
@@ -100,7 +103,6 @@ public class NewOrderController {
 				"\n" +
 				"            <strong style=\"font-size: 15px; color: #DC3545;\">Royal Fotógrafos</strong><br>\n" +
 				"            <span class=\"ios-footer\">\n" +
-				"              Calle San Javier<br>\n" +
 				"              Guadalajara, JAL<br>\n" +
 				"            </span>\n" +
 				"            <a href=\"http://www.RoyalFotografos.com\">www.RoyalFotografos.com</a><br>\n" +
@@ -120,7 +122,7 @@ public class NewOrderController {
 				"</html>";
 
 
-		smtpMailSender.send(form.getEmail(), "Prueba Pedido NUEVO", SendString);
+		smtpMailSender.send(order.getEmail(), "Prueba Pedido NUEVO", SendString);
 
 
 //		smtpMailSender.send("royal.fotografos@gmail.com", "Prueba Pedido NUEVO", SendString);

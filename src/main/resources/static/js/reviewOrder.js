@@ -184,11 +184,11 @@ function confirmOrder(){
       if (user.providerData[0].providerId == 'facebook.com'){
 
         var FormInfo = {FirstName: user.displayName,
-            LastName: null,
+            ServiceType: localStorage.getItem('ServiceType'),
             Email: user.email,
-            Link: null,
-            Equipment: null,
-            AgreeTerms: null,
+            DateHours: localStorage.getItem('DateAndTime'),
+            Total: document.getElementById('TotalPrices').innerHTML,
+            AgreeTerms: "",
         };
         //SEND MAIL HERE
         accion(FormInfo);
@@ -205,12 +205,17 @@ function confirmOrder(){
           //if (user.emailVerified == true) {
           console.log("ENTRO!");
           //window.location.replace("/successfulOrder");
+          //FirstName;
+          //Email;
+          //DateHours;
+          //Total;
+          //AgreeTerms;
           //SEND MAIL HERE
           var FormInfo = {FirstName: " ",
-              LastName: "",
+              ServiceType: localStorage.getItem('ServiceType'),
               Email: user.email,
-              Link: "",
-              Equipment: "",
+              DateHours: localStorage.getItem('DateAndTime'),
+              Total: "",
               AgreeTerms: "",
           };
           //SEND MAIL HERE
