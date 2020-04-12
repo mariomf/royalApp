@@ -1,0 +1,26 @@
+{
+    "name": "Royal Fotografos",
+    "short_name": "Royal",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#490275",
+    "theme_color": "#FFFFFF",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/img/Logotipo Royal-01.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/img/NewTabIcon.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/img/Logotipo Royal-01.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ]
+}

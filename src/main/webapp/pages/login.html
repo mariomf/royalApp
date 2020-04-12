@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Royal Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="login_div" class="container main-div">
+
+      <form id="signup-form" class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input class="form-control" placeholder="Email address" required="" autofocus="" type="email" id="email_field">
+        <input class="form-control" placeholder="Password" required="" type="password" id="password_field">
+        <label class="checkbox">
+          <input value="remember-me" type="checkbox"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block">Sign in</button><!--type="submit"-->
+        <!--onclick="login()"-->
+      </form>
+
+    </div>
+
+    <div id="user-div" class="loggedin-div">
+      <h3> Welcome User</h3>
+      <p> Welcome to Firebase web login Example. Uou re currently logged in.</p>
+      <button>Logout</button>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBVl8wi6GHV2THYsp7ktXU0_LtaNbl7Nco",
+        authDomain: "royalappbeta.firebaseapp.com",
+        databaseURL: "https://royalappbeta.firebaseio.com",
+        projectId: "royalappbeta",
+        storageBucket: "",
+        messagingSenderId: "632408986319",
+        appId: "1:632408986319:web:e8fe24d9bb41e758"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

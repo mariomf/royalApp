@@ -62,7 +62,7 @@ public class NewPhotographerController {
                 "  font-weight: bold;\n" +
                 "  padding-bottom: 12px;\n" +
                 "  color: #38bd38; font-family: Helvetica, Arial, sans-serif;\">\n" +
-				"            Gracias, tu pedido ha sido colocado EXITOSAMENTE!\n" +
+				"            Gracias por estar interesado con nosotros, ya tenemos tu información!\n" +
 				"          </td>\n" +
 				"        </tr>\n" +
 				"        <tr>\n" +
@@ -73,7 +73,7 @@ public class NewPhotographerController {
                 "background-color: #ffffff;\" class=\"container-padding content\" align=\"left\">\n" +
 				"            <br>\n" +
 				"\n" +
-				"<div style=\"font-family: Helvetica, Arial, sans-serif;\" class=\"title\">Pedido con Royal</div>\n" +
+				"<div style=\"font-family: Helvetica, Arial, sans-serif;\" class=\"title\">Información Royal Fotógrafo</div>\n" +
 				"<br>\n" +
 				"\n" +
 				"<div class=\"body-text\">\n" +
@@ -98,15 +98,14 @@ public class NewPhotographerController {
 				"            &copy; 2019 Royal\n" +
 				"            <br><br>\n" +
 				"\n" +
-				"            You are receiving this email because you opted in on our website. Update your <a href=\"contacto@Royal.com\">email preferences</a> or <a href=\"#\">unsubscribe</a>.\n" +
+				"            You are receiving this email because you opted in on our website. Update your <a href=\"royal.fotografos@gmail.com\">email preferences</a> or <a href=\"#\">unsubscribe</a>.\n" +
 				"            <br><br>\n" +
 				"\n" +
-				"            <strong style=\"font-size: 15px; color: #DC3545;\">Royal</strong><br>\n" +
+				"            <strong style=\"font-size: 15px; color: #DC3545;\">Royal Fotógrafos</strong><br>\n" +
 				"            <span class=\"ios-footer\">\n" +
-				"              Calle San Javier<br>\n" +
 				"              Guadalajara, JAL<br>\n" +
 				"            </span>\n" +
-				"            <a href=\"http://www.Royal.com\">www.Royal.com</a><br>\n" +
+				"            <a href=\"http://www.RoyalFotografos.com\">www.RoyalFotografos.com</a><br>\n" +
 				"\n" +
 				"            <br><br>\n" +
 				"\n" +
@@ -123,10 +122,11 @@ public class NewPhotographerController {
 				"</html>";
 
 
-		smtpMailSender.send("mmf.apps@gmail.com", "Prueba Pedido NUEVO", SendString);
+		smtpMailSender.send(form.getEmail(), "Prueba Pedido NUEVO", SendString);
 
 
-		//smtpMailSender.send(form.getEmail(), "Prueba Pedido NUEVO", SendString);
+//		smtpMailSender.send("royal.fotografos@gmail.com", "Prueba Pedido NUEVO", SendString);
+		smtpMailSender.send("mario_66_99@hotmail.com", "Prueba Pedido NUEVO", SendString);
 
 		//System.out.println(data.size());
 

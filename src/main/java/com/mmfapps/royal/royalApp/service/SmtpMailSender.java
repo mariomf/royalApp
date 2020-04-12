@@ -20,12 +20,13 @@ public class SmtpMailSender {
 		MimeMessageHelper helper;
 		
 		helper = new MimeMessageHelper(message, true); // true indicates
-													   // multipart message
+									// multipart message
 		helper.setSubject(subject);
 		helper.setTo(to);
 		helper.setText(body, true); // true indicates html
 		// continue using helper object for more functionalities like adding attachments, etc.  
 		
+		helper.setFrom("mario.mucino.flores@gmail.com");
 		javaMailSender.send(message);
 		
 		
