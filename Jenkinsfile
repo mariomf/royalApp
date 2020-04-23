@@ -1,18 +1,20 @@
 pipeline {
-    agent { label 'windows'}
-    tools {
+    //agent { label 'windows'}
+    agent { docker 'maven:3.6.3-amazoncorretto-8' }
+    /* tools {
         maven 'M3'
-    }
+    } */
     stages {
         stage('checkout') {
             steps{
                 git 'https://github.com/mariomf/royalApp.git'
-                echo "Hello World!"
+                //echo "Hello World!"
             }
         }
         stage('Build'){
             steps {
-                bat 'mvn clean compile'
+                //bat 'mvn clean compile'//for windows
+                sh 'mvn clean package'
             }
         }
         /* stage('Test'){
@@ -21,11 +23,11 @@ pipeline {
                 junit '**/    /*target/surefire-reports/TEST-*.xml'
             }
         } */
-        stage('Package'){
+        /* stage('Package'){
             steps {
                 bat 'mvn package'
             }
 
-        }
+        } */
     }
 }
