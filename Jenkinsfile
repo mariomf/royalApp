@@ -15,6 +15,7 @@ pipeline {
             steps {
                 //bat 'mvn clean compile'//for windows
                 sh 'mvn clean package'
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint:true
             }
         }
         /* stage('Test'){
