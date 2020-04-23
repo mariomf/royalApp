@@ -30,5 +30,11 @@ pipeline {
             }
 
         } */
+        stage('Deploy'){
+            steps{
+                input 'Do you approve the deployment?'
+                echo 'Deploying...'
+            }
+        }
     }
 }
