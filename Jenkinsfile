@@ -36,8 +36,12 @@ pipeline {
             steps{
                 input 'Do you approve the deployment?'
                 echo 'Deploying...'
-                sh 'scp target/*.jar jenkins@172.31.18.72:/opt/ryapp/'
-                sh "ssh jenkins@172.31.18.72 'nohup java -jar /opt/ryapp/royalApp-0.0.1-SNAPSHOT.jar &'"
+                sh 'cp target/*.jar /opt/ryapp/'
+                sh 'nohup java -jar /opt/ryapp/royalApp-0.0.1-SNAPSHOT.jar &'
+
+                //Command use to copy files with SSH connection
+                //sh 'scp target/*.jar jenkins@172.31.18.72:/opt/ryapp/'
+                //sh "ssh jenkins@172.31.18.72 'nohup java -jar /opt/ryapp/royalApp-0.0.1-SNAPSHOT.jar &'"
                 
             }
         }
