@@ -1,6 +1,7 @@
 pipeline {
     //agent { label 'windows'}
-    
+    //agent { docker 'maven:3.6.3-amazoncorretto-8' }
+    agent none
     /* tools {
         maven 'M3'
     } */
