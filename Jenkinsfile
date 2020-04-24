@@ -36,7 +36,7 @@ pipeline {
             steps{
                 input 'Do you approve the deployment?'
                 echo 'Deploying...'
-                sh 'sudo cp target/*.jar /opt/ryapp/'
+                sh 'cp target/*.jar /opt/ryapp/'
                 sh 'nohup java -jar /opt/ryapp/royalApp-0.0.1-SNAPSHOT.jar &'
 
                 //Command use to copy files with SSH connection
