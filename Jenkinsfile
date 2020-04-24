@@ -1,6 +1,6 @@
 pipeline {
     //agent { label 'windows'}
-    agent { docker 'maven:3.6.3-amazoncorretto-8' }
+    
     /* tools {
         maven 'M3'
     } */
@@ -12,6 +12,7 @@ pipeline {
             }
         }
         stage('Build'){
+            agent { docker 'maven:3.6.3-amazoncorretto-8' }
             steps {
                 //bat 'mvn clean compile'//for windows
                 sh 'mvn clean package'
