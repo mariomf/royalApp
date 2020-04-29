@@ -4,30 +4,44 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 
 import javax.mail.MessagingException;
+import javax.validation.Valid;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 import com.mmfapps.royal.royalApp.model.NewOrder;
+import com.mmfapps.royal.royalApp.repository.NewOrderRepository;
 import com.mmfapps.royal.royalApp.service.SmtpMailSender;
 
-@Controller
+@RestController
 public class NewOrderController {
 	
 	@Autowired
+	private NewOrderRepository repository;
+	
+	@Autowired
 	private SmtpMailSender smtpMailSender;
-
-	@PostMapping("/sendOrderMail")
-	public void sendMail (@RequestBody String orderInfo) throws MessagingException, GeneralSecurityException, IOException {
+/*************************************************************************************/
+/**TODO The method has to be change the name will be something like "setNewOrder" in this method set the JSON a use it
+ * to persist into the data base and after that call the method that send the email passing just the information needed.
+ * Also try to follow some other good practices base in the StockControl Project**/
+	@PostMapping("//sendOrderMail")
+	public void sendMail (@Valid @RequestBody String orderInfo) throws MessagingException, GeneralSecurityException, IOException {
+	//public void sendMail (@RequestBody String orderInfo) throws MessagingException, GeneralSecurityException, IOException {
 		Gson gson = new Gson();
-//		ArrayList<Form> yourArray = gson.fromJson(prueba_aux, new TypeToken<List<Form>>(){}.getType());
-		NewOrder order = new NewOrder();
-		order = gson.fromJson(orderInfo,NewOrder.class);
+//		******************ArrayList<Form> yourArray = gson.fromJson(prueba_aux, new TypeToken<List<Form>>(){}.getType());
+		ObjectId order_id = ObjectId.get();
 		
-
+		NewOrder newOrder = new NewOrder();
+		NewOrder.set_id(order_id);
+		newOrder = gson.fromJson(orderInfo,NewOrder.class);
+		
+		repository.save(newOrder);
 
 		String SendString = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n" +
 				"<html xmlns=\"http://www.w3.org/1999/xhtml\" \n" +
@@ -77,11 +91,11 @@ public class NewOrderController {
 				"<br>\n" +
 				"\n" +
 				"<div class=\"body-text\">\n" +
-					"Nombre : "+order.getFirstName()+" <br>\n" +
-					"Servicio : "+order.getServiceType()+" <br>\n" +
-					"Email : "+order.getEmail()+" <br>\n" +
-					"Día y hora : "+order.getDateHours()+" <br>\n" +
-					"Total : "+order.getTotal()+" <br>\n" +
+					"Nombre : "+newOrder.getFirstName()+" <br>\n" +
+					"Servicio : "+newOrder.getServiceType()+" <br>\n" +
+					"Email : "+newOrder.getEmail()+" <br>\n" +
+					"Día y hora : "+newOrder.getDateHours()+" <br>\n" +
+					"Total : "+newOrder.getTotal()+" <br>\n" +
 				"  <br><br>\n" +
 				"\n" +
 				"  <br><br>\n" +
@@ -122,7 +136,7 @@ public class NewOrderController {
 				"</html>";
 
 
-		smtpMailSender.send(order.getEmail(), "Prueba Pedido NUEVO", SendString);
+		smtpMailSender.send(newOrder.getEmail(), "Prueba Pedido NUEVO", SendString);
 
 
 //		smtpMailSender.send("royal.fotografos@gmail.com", "Prueba Pedido NUEVO", SendString);

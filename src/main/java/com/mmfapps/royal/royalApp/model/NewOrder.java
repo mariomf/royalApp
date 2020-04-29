@@ -1,6 +1,12 @@
 package com.mmfapps.royal.royalApp.model;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+
 public class NewOrder {
+	
+	@Id
+	public ObjectId _id;
 	
 	private String FirstName;
 	private String ServiceType;
@@ -9,9 +15,10 @@ public class NewOrder {
 	private String Total;
 	private boolean AgreeTerms;
 	
-	public NewOrder(String FirstName, String ServiceType, String Email, 
+	public NewOrder(ObjectId _id, String FirstName, String ServiceType, String Email, 
 			String DateHours, String Total, boolean AgreeTerms) {
 		
+		this._id = _id;
 		this.FirstName = FirstName;
 		this.ServiceType = ServiceType;
 		this.Email = Email;
@@ -23,6 +30,11 @@ public class NewOrder {
 	public NewOrder() {
 		
 	}
+	
+	// ObjectId needs to be converted to string
+	public String get_id() { return _id.toHexString(); }
+	//public void set_id(ObjectId _id) { this._id = _id; }
+	public static void set_id(ObjectId _id) {}
 
 	public String getFirstName() {
 		return FirstName;
