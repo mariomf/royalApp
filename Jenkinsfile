@@ -1,7 +1,7 @@
 pipeline {
     //agent { label 'windows'}
-    agent { docker 'maven:3.6.3-amazoncorretto-8' }//**********
-    //************agent { label 'master'}
+    //**********agent { docker 'maven:3.6.3-amazoncorretto-8' }
+    agent { label 'master'}//************
     /* tools {
         maven 'M3'
     } */
@@ -13,7 +13,7 @@ pipeline {
             }
         }
         stage('Build'){
-            //************agent { docker 'maven:3.6.3-amazoncorretto-8' }
+            agent { docker 'maven:3.6.3-amazoncorretto-8' }//************
             steps {
                 //bat 'mvn clean compile'//for windows
                 sh 'mvn clean package'
@@ -36,8 +36,8 @@ pipeline {
             steps{
                 input 'Do you approve the deployment?'
                 echo 'Deploying...'
-                //*************sh 'cp target/*.jar /opt/ryapp/'
-                //*************sh 'nohup java -jar /opt/ryapp/royalApp-0.0.1-SNAPSHOT.jar &'
+                sh 'cp target/*.jar /opt/ryapp/'//*************
+                sh 'nohup java -jar /opt/ryapp/royalApp-0.0.1-SNAPSHOT.jar &'//*************
 
                 //Command use to copy files with SSH connection
                 //sh 'scp target/*.jar jenkins@172.31.18.72:/opt/ryapp/'
