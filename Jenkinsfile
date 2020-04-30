@@ -13,7 +13,7 @@ pipeline {
             }
         }
         stage('Build'){
-            agent { docker 'maven:3.6.3-amazoncorretto-8' }//************
+            //agent { docker 'maven:3.6.3-amazoncorretto-8' }//************
             steps {
                 //bat 'mvn clean compile'//for windows
                 sh 'mvn clean package'
