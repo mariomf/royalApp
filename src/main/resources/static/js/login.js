@@ -1,13 +1,21 @@
 /*$(document).ready(function(){
     login();
 });*/
+var userTest = firebase.auth().currentUser;
+// user.reload();
+// if (userTest.emailVerified = true){
+//   console.log("ENTRO!");
+//   window.location.replace("/ReviewOrder");
+// }
+
 firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
     if (user) {
 
       console.log("Is loged in");
       //console.log(additionalUserInfo.providerId);
       console.log(user);
-      if (user.emailVerified = true){
+      user.reload();
+      if (userTest.emailVerified = true){
         console.log("ENTRO!");
         window.location.replace("/ReviewOrder");
       }
@@ -28,7 +36,8 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
         //console.log("Is verified");
       } else {
         console.log("ENTRO!");
-        window.location.replace("/ReviewOrder");
+        window.alert("Te hemos enviado un mail de verificacion!")
+        //window.location.replace("/ReviewOrder");
       }
 
       /*document.getElementById("user_div").style.display = "block";
@@ -43,12 +52,24 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
  const signupForm = document.querySelector('#signup-form');
  signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  var userName = document.getElementById("name_field_signup").value;
+  var userLastName = document.getElementById("lastName_field_signup").value;
   var userEmail = document.getElementById("email_field").value;
   var userPass = document.getElementById("password_field").value;
   firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).then(function(result) {
 
     var user = result.user;
     user.sendEmailVerification().then(function(){
+      
+      //console.log(userName, userLastName, userEmail, userPass);
+      var userInfo = {user_name: userName,
+        user_lastName: userLastName,
+        user_email: userEmail,
+        entry_date: Date(),
+      };
+
+      //USER to DB
+      NewUser(userInfo);
       //Email sent
       window.alert("Te hemos enviado un mail de verificacion!")
     }).catch(function(error) {
@@ -126,6 +147,25 @@ function singUp(){
   window.location.replace("/SignUp");
 }
 
+function NewUser(UserInfo) {
+
+  var urlVideogamesPersist = "/user";
+
+  postearUser(urlVideogamesPersist,UserInfo);
+
+  console.log(JSON.stringify(UserInfo));
+  
+}
+
+function postearUser(UrlAEnviar,data){
+  $.ajax({
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      url: UrlAEnviar,
+      data:  JSON.stringify(data),
+      dataType: "json"
+  });
+}
 /*function login(){
     //var userEmail = $("#email_field").val();
     //var userPass = $("#password_field").val();
