@@ -1,0 +1,5 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "com.royalFotografos",
+                 "sha256_cert_fingerprints": ["CE:9B:8A:95:B0:E7:C3:DD:57:1A:0D:2C:A4:A4:8A:9A:90:AC:7D:24:C8:C6:39:4D:93:56:B5:9C:50:D7:44:AD"] }
+  }]
