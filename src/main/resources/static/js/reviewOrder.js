@@ -3,17 +3,31 @@ $(document).ready(function(){
   // var qs = new Querystring();
   // var v1 = qs.get("ServiceType");
   //var aux = '';
+  const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo",
+   "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
   // Get it from the local storage
   var selected = localStorage.getItem('ServiceType');
-  var selected1 = localStorage.getItem('DateAndTime');
+  var event_datetime = new Date(localStorage.getItem('DateAndTime'));
+  console.log(event_datetime);
+  console.log(event_datetime.getHours() + "-" +
+    event_datetime.getMinutes() + "-" +
+    event_datetime.getTime() + "-" +
+    event_datetime.getTimezoneOffset() + "-" +
+    event_datetime.getUTCDate() + "-" +
+    event_datetime.getUTCDay() + "-" +
+    event_datetime.getUTCHours() + "-" +
+    event_datetime.getUTCMinutes());
+  var formatted_date = event_datetime.getDate() + "-" + months[event_datetime.getMonth()] + "-" + event_datetime.getFullYear() +
+    " a las " + event_datetime.getHours() + ":" + event_datetime.getMinutes()  ;
   var TotalPrice = 0;
   //var aux1 = "<small class='text-muted'>"+selected1+"</small>";
   //aux += "<h2>"+selected+"</h2>";
   //$('.h1la').append(selected);
 //  $('.SelectedDate').append(aux1)
-  document.getElementById('SelectedDate').innerHTML = selected1;
+
+  document.getElementById('SelectedDate').innerHTML = formatted_date;
   console.log("selected="+selected);
-  console.log(selected1);
+  console.log(formatted_date);
 
 /********************* ROYAL SOCIAL OPTIONS **********************************/
   //SEE THE OPTION OF A SWITCH CASE

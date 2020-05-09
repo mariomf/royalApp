@@ -7,6 +7,6 @@ import com.mmfapps.royal.royalApp.model.User;
 
 public interface UserRepository extends MongoRepository<User, String>{
 	
-	User findBy_id(ObjectId _id);
+	User findBy_id(String _id);
 
 }

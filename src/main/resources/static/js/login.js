@@ -15,31 +15,33 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
       //console.log(additionalUserInfo.providerId);
       console.log(user);
       user.reload();
-      if (userTest.emailVerified = true){
+      if (user.emailVerified == true){
         console.log("ENTRO!");
         window.location.replace("/ReviewOrder");
-      }
-      // User is signed in.
-      if (additionalUserInfo == null){//&& user.emailVerified == false
-        console.log("Is NOT verified");
-        /*user.sendEmailVerification().then(function() {
-          //Email sent
-          window.alert("Te hemos enviado un mail de verificacion!")
-        }).catch(function(error)) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
+      } else if (user.providerData[0].providerId == 'facebook.com'){
+        console.log("ENTRO!");
+        var userInfo = {
+          user_name: user.displayName,
+          user_lastName: user.displayName,
+          user_email: user.email,
+          entry_date: Date(),
+        };
 
-          window.alert("Error..." + errorMessage);
-        });*/
+        console.log(user);
 
-        //console.log("Is verified");
-      } else {
+        //USER to DB
+        NewUser(userInfo);
+        $(document).ajaxStop(function () {
+          //window.location.replace("/ReviewOrder");
+          // place code to be executed on completion of last outstanding ajax call here
+        });
+        //window.alert("Te hemos enviado un mail de verificacion!")
+        //window.location.replace("/ReviewOrder");
+      }else {
         console.log("ENTRO!");
         window.alert("Te hemos enviado un mail de verificacion!")
-        //window.location.replace("/ReviewOrder");
+        window.location.replace("/ReviewOrder");
       }
-
       /*document.getElementById("user_div").style.display = "block";
       document.getElementById("login_div").style.display = "none";*/
     } else {
@@ -52,6 +54,7 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
  const signupForm = document.querySelector('#signup-form');
  signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
+
   var userName = document.getElementById("name_field_signup").value;
   var userLastName = document.getElementById("lastName_field_signup").value;
   var userEmail = document.getElementById("email_field").value;
@@ -72,6 +75,7 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
       NewUser(userInfo);
       //Email sent
       window.alert("Te hemos enviado un mail de verificacion!")
+      //window.location.replace("/ReviewOrder");
     }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;

@@ -15,14 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 import com.mmfapps.royal.royalApp.model.NewOrder;
+import com.mmfapps.royal.royalApp.model.User;
 import com.mmfapps.royal.royalApp.repository.NewOrderRepository;
+import com.mmfapps.royal.royalApp.repository.UserRepository;
 import com.mmfapps.royal.royalApp.service.SmtpMailSender;
 
 @RestController
 public class NewOrderController {
 	
 	@Autowired
-	private NewOrderRepository repository;
+	private NewOrderRepository newOrderRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	@Autowired
 	private SmtpMailSender smtpMailSender;
@@ -37,11 +42,16 @@ public class NewOrderController {
 //		******************ArrayList<Form> yourArray = gson.fromJson(prueba_aux, new TypeToken<List<Form>>(){}.getType());
 		ObjectId order_id = ObjectId.get();
 		
-		NewOrder newOrder = new NewOrder();
+		//NewOrder newOrder = new NewOrder();
 		NewOrder.set_id(order_id);
-		newOrder = gson.fromJson(orderInfo,NewOrder.class);
+		NewOrder newOrder = gson.fromJson(orderInfo,NewOrder.class);
 		
-		repository.save(newOrder);
+		User user = userRepository.findBy_id(newOrder.getEmail());
+		System.out.println(newOrder.getEmail());
+		System.out.println(user.getUser_name());
+		newOrder.setFirstName(user.getUser_name());
+
+		newOrderRepository.save(newOrder);
 
 		String SendString = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n" +
 				"<html xmlns=\"http://www.w3.org/1999/xhtml\" \n" +

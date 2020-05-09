@@ -23,9 +23,12 @@ public class UserController {
 	private UserRepository repository;
 	
 	@RequestMapping(value = "//user", method = RequestMethod.POST)
-	public User createProduct(@Valid @RequestBody User user) throws IOException, WriteConcernException {
+	public User createUser(@Valid @RequestBody User user) throws IOException, WriteConcernException {
 		
-		ObjectId user_id = ObjectId.get();
+//		ObjectId user_id = ObjectId.get();
+//		user.set_id(user_id);
+		
+		String user_id = user.getUser_email();
 		user.set_id(user_id);
 		
 	  repository.save(user);

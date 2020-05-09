@@ -7,18 +7,20 @@ import org.springframework.data.annotation.Id;
 public class User {
 	
 	@Id
-	public ObjectId _id;
+	public String _id;
 	  
 	public String user_name;
 	public String user_lastName;
+	
 	public String user_email;
+	
 	public String entry_date;
 	
 	  
 	// Constructors
 	public User() {}
 	  
-	public User(ObjectId _id, String user_name, String user_lastName, String user_email, String entry_date) {
+	public User(String _id, String user_name, String user_lastName, String user_email, String entry_date) {
 		
 	  this._id = _id;
 	  this.user_name = user_name;
@@ -28,8 +30,11 @@ public class User {
 	}
 	
 	// ObjectId needs to be converted to string
-	public String get_id() { return _id.toHexString(); }
-	public void set_id(ObjectId _id) { this._id = _id; }
+//	public String get_id() { return _id.toHexString(); }
+//	public void set_id(ObjectId _id) { this._id = _id; }
+	
+	 public String get_id() { return _id; }
+	 public void set_id(String _id) { this._id = _id; }
 	
 	public String getUser_name() {return user_name;}
 	public void setUser_name(String user_name) {this.user_name = user_name;}
