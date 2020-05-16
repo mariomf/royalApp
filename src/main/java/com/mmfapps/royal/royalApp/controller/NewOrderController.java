@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 import com.mmfapps.royal.royalApp.model.NewOrder;
+import com.mmfapps.royal.royalApp.model.Product;
 import com.mmfapps.royal.royalApp.model.User;
 import com.mmfapps.royal.royalApp.repository.NewOrderRepository;
+import com.mmfapps.royal.royalApp.repository.ProductRepository;
 import com.mmfapps.royal.royalApp.repository.UserRepository;
 import com.mmfapps.royal.royalApp.service.SmtpMailSender;
 
@@ -28,6 +30,9 @@ public class NewOrderController {
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private ProductRepository productRepository;
 	
 	@Autowired
 	private SmtpMailSender smtpMailSender;
@@ -50,6 +55,10 @@ public class NewOrderController {
 		System.out.println(newOrder.getEmail());
 		System.out.println(user.getUser_name());
 		newOrder.setFirstName(user.getUser_name());
+		
+		Product product = productRepository.findBy_id(newOrder.getServiceType());
+		newOrder.setTotal(product.getPrice());
+		newOrder.setServiceType(product.getProduct_name());
 
 		newOrderRepository.save(newOrder);
 

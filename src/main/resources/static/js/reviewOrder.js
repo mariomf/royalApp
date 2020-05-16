@@ -200,9 +200,9 @@ function confirmOrder(){
         var FormInfo = {FirstName: user.displayName,
             ServiceType: localStorage.getItem('ServiceType'),
             Email: user.email,
-            DateHours: localStorage.getItem('DateAndTime'),
-            Total: document.getElementById('TotalPrices').innerHTML,
-            AgreeTerms: "",
+            DateHours: document.getElementById('SelectedDate').innerHTML,
+            //Total: document.getElementById('TotalPrices').innerHTML,
+            //AgreeTerms: "",
         };
         //SEND MAIL HERE
         accion(FormInfo);
@@ -228,9 +228,9 @@ function confirmOrder(){
           var FormInfo = {FirstName: " ",
               ServiceType: localStorage.getItem('ServiceType'),
               Email: user.email,
-              DateHours: localStorage.getItem('DateAndTime'),
-              Total: "",
-              AgreeTerms: "",
+              DateHours: document.getElementById('SelectedDate').innerHTML,
+              //Total: "",
+              //AgreeTerms: "",
           };
           //SEND MAIL HERE
           accion(FormInfo);

@@ -32,8 +32,8 @@ firebase.auth().onAuthStateChanged(function(user, additionalUserInfo) {
         //USER to DB
         NewUser(userInfo);
         $(document).ajaxStop(function () {
-          //window.location.replace("/ReviewOrder");
           // place code to be executed on completion of last outstanding ajax call here
+          window.location.replace("/ReviewOrder");
         });
         //window.alert("Te hemos enviado un mail de verificacion!")
         //window.location.replace("/ReviewOrder");
