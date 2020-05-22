@@ -62,6 +62,13 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!--******************  Encrypting data  ***************-->
+		<dependency>
+			 <groupId>com.github.ulisesbocchio</groupId>
+			 <artifactId>jasypt-spring-boot-starter</artifactId>
+			 <version>LATEST</version>
+		</dependency>
+		<!--******************  Encrypting data  ***************-->
 	</dependencies>
 
 	<build>
